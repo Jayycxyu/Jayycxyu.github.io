@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Um.. What's Going On??</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+    <!-- tailwind buat tempat liat webnya -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    /> <!-- animate buat kasih animasi font -->
+</head>
+
+<body style="background-image: url(https://i.pinimg.com/736x/90/42/cb/9042cbff69b76c37c0e4fef3bfccd185.jpg);
+    "class="flex justify-center h-screen items-center  font-semibold"> 
+    <!-- flex buat bikin teks justify, h-screen buat tinggi kotaknya, items-center buat bikin kotaknya ditengah, m itu margin, animate buat animasi -->
+    <div class="bg-white border px-10 py-8 border-4 border-gray-300 shadow-lg shadow-blue-300 rounded-xl text-center animate__animated animate__backInDown m-8 w-80" id="Kartu"> 
+    <!-- px buat jarak kiri kanan, py buat jarak atas bawah, border buat garis tepi, rounded buat bikin lengkung diujung-->
+        <h1 class="text-3xl">Happy Birthday</h1>
+    <!-- text-3xl buat besarin ukurannya -->
+        <h2 class="text-4xl text-blue-300 font-bold animate__animated animate__pulse animate__infinite">Teen</h2>
+    <!-- animate untuk transisi (animated) wajib di pake (pulse) itu gerakannya (infinite) itu durasinya -->
+        <button class="p-2 bg-blue-300 text-white rounded mt-5 hover:bg-blue-500 transition ease-in w-full animate__animated animate__delay-1s animate__tada" onclick="UbahKartu()"
+        >Click Here!</button>
+    <!-- hover dan transition buat berubah warna pas di klik, w-full buat bikin kotaknya full -->
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+    let Kartu = document.getElementById("Kartu");
+    function UbahKartu() {
+        Kartu.innerHTML = `<h1 class="font-semibold text-warp animate__animated animate__zoomIn">Happie B-Dayy to my amazing friend, PP! May ur special day be as fantastic as u are. Wishing u a day filled with joy, laughter, and everything you've been hoping for. Hope u finally get into the university of ur choice next year! Thank u for always being there. Here's to many more years of friendship and fun 🤓🎉.
+    </h1>
+    <h2 class="mt-3 animate__animated animate__fadeIn">- From : Jane O.O -
+    </h2>
+    <button
+      class="p-2 bg-slate-600 text-white rounded mt-5 hover:bg-slate-900 transition ease-in w-full animate__animated animate__delay-1s animate__tada"
+      onclick="refresh()"
+    > Back
+    </button>
+    `;
+    }
+    function refresh() {
+        location.reload();
+      }
+    </script>
+</div>
+</body>
+
+
+
+</html>
